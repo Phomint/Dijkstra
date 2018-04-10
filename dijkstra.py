@@ -49,13 +49,13 @@ class Grafo:
 
             if menor == destino:
                 caminho = []
+
                 while anterior[menor]:
                     caminho.append(menor)
                     menor = anterior[menor]
-                return caminho
 
-            if distancia[menor] == sys.maxsize:
-                break
+                caminho.append(origem)
+                return caminho
 
             for vizinho in self.vertices[menor]:
                 alt = distancia[menor] + self.vertices[menor][vizinho]
@@ -68,6 +68,7 @@ class Grafo:
                             n[0] = alt
                             break
                     heapq.heapify(no)
+
         return distancia
 
 if __name__ == '__main__':
@@ -79,5 +80,3 @@ if __name__ == '__main__':
 
     g.matrizAdjacente(local)
     print(g.menorDistancia(origem, destino))
-
-
