@@ -73,7 +73,7 @@ class Grafo:
 if __name__ == '__main__':
     g = Grafo()
 
-    local = str(input('Local do a# Se houver um novo caminho mais curto, atualize nossa fila de prioridades (relaxe)rquivo para análise dijkstra: '))
+    local = str(input('Local do arquivo para análise dijkstra: '))
     origem = str(input('Origem do caminho: '))
     destino = str(input('Destino do caminho: '))
 
